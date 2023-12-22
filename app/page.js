@@ -64,7 +64,7 @@ function Home() {
         {submittedForm && <p className="text-red-600">Form has been submitted!</p>}
       </div>
       <div className="flex items-center justify-center">
-        <button onClick={() => {setSubmittedForm(true), setTimeout(() => {setSubmittedForm(false);}, 1000), fetch('http://localhost:3000/api/submitFormData', { method: "POST", headers: { "Content-type": "application/json" }, body: JSON.stringify({ "jobName": jobName, "customerName": customerName, "materialIDs": getMaterialIds(), "materialNames": getMaterialNames(), "printType": pType, "printCustomerName": printCustomerName, "shouldPrintCustomText": showTextField, "printCustomText": text, "designNotes": note }) })}} className="border-2 border-black p-1 rounded-lg hover:bg-blue-300">Submit</button>
+        <button onClick={() => {setSubmittedForm(true), setTimeout(() => {setSubmittedForm(false);}, 1000), fetch('/api/submitFormData', { method: "POST", headers: { "Content-type": "application/json" }, body: JSON.stringify({ "jobName": jobName, "customerName": customerName, "materialIDs": getMaterialIds(), "materialNames": getMaterialNames(), "printType": pType, "printCustomerName": printCustomerName, "shouldPrintCustomText": showTextField, "printCustomText": text, "designNotes": note }) })}} className="border-2 border-black p-1 rounded-lg hover:bg-blue-300">Submit</button>
       </div>
     </div>
   );
